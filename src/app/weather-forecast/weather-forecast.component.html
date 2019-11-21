@@ -1,0 +1,11 @@
+<main>
+    <ng-container *ngFor="let i of nowWeather" >
+        <input class="tab-button" type="button" [value]="i.location" (click)="chooseTab(i)" />
+        <input class="tab-close" type="button" value="×" (click)="deleteTab(i)"/>
+    </ng-container>
+
+    <ng-container *ngIf="(nowWeather.length) > 0 && (tHoursForecast.length) > 0">
+            <app-location-data [now]="nowWeather[active]" [list]="tHoursForecast[active]"></app-location-data>
+    </ng-container>
+    <a href="https://openweathermap.org/" id="poweredby" target="_blank">powered by openweather</a>
+</main>

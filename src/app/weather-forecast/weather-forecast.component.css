@@ -1,0 +1,33 @@
+
+main{
+    padding-top:100px;
+    margin-left: 20px;
+    margin-right: 20px; 
+}
+
+#poweredby{
+    font-size: 12px;
+    color: gray;
+    text-decoration: none;
+
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.tab-button{
+    border-style: none;
+    background-color: lightgray;
+    padding: 3px 10px;
+}
+
+.tab-close{
+    border-style: none;
+    background-color: lightgray;
+    padding: 3px;
+    margin: 0px 3px 0px 0px
+}
+
+.tab-active{
+    background-color: lightgray;
+}

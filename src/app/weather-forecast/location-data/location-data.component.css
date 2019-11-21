@@ -1,0 +1,83 @@
+p{
+    margin: 3px 0px;
+}
+
+#location-name{
+    font-size:25px;
+
+}
+
+#present-time{
+    font-size:14px;
+}
+
+#now-data{
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+#now-data > div{
+    padding: 10px;
+
+}
+
+#now-data div p{
+    font-size: 18px;
+}
+
+#now-description{
+    font-size: 12px !important;
+}
+
+#present-icon{
+    width:80px;
+    height:80px;
+    object-fit: none;
+    margin:10px;
+    filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.4));
+}
+
+.temp-max{
+    color:red;
+}
+
+.temp-min{
+    color:blue;
+}
+
+.temp-max::after , .temp-min::after{
+    content:"℃";
+}
+
+.weather-list{
+    display:flex;
+    flex-flow:row wrap;
+    align-content:space-between;
+}
+
+.weather-data{
+    display:flex;
+    flex-flow: column nowrap;
+
+    flex: 0 0 auto;
+    
+    margin: 0 0 10px 0;
+    padding:10px;
+}
+
+.weather-data img{
+    width:70px;
+    height:70px;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.4));
+}
+
+.weather-data:nth-of-type(5n+1){ background-color: lavenderblush; }
+.weather-data:nth-of-type(5n+2){ background-color: lightyellow; }
+.weather-data:nth-of-type(5n+3){ background-color: honeydew; }
+.weather-data:nth-of-type(5n+4){ background-color: lightcyan; }
+.weather-data:nth-of-type(5n){ background-color: lavender; }
+
+
+.weather-data > *{
+    margin: 0 auto;
+}

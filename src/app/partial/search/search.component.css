@@ -1,0 +1,11 @@
+label #add-info-button{
+    background: deepskyblue;
+    border-style: none;
+    padding: 3px 10px;
+    color:white;
+    margin:3px;
+}
+
+label button:active{
+    background: slategray;
+}

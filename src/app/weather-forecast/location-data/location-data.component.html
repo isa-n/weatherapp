@@ -1,0 +1,33 @@
+
+<p>
+    <span id="location-name">{{now.location}}({{now.country}}) の天気情報</span>
+    <span id="present-time"> {{now.nowtime | date:'yyyy/M/d H:mm'}} 取得</span>
+</p>
+<p>現在の天気</p>
+
+<div id="now-data">
+    <img id="present-icon" [src]="now.icon" [alt]="now.weather" />
+    <div>
+        <p>{{now.weather}}</p>
+        <p id="now-description">({{now.description}})</p>
+        <p>
+            <span class="temp-max">{{now.temp_max}}</span> / <span class="temp-min">{{now.temp_min}}</span>
+        </p>
+    </div>
+    <div>
+        <p>湿度 : {{now.humidity}} %</p>
+        <p>気圧 : {{now.pressure}} hPa</p>
+        <p>風速 : {{now.wind_speed}} m/s</p>
+    </div>
+</div>
+
+<p>3時間ごとの天気</p>
+<div class="weather-list">
+    <div *ngFor="let item of list" class="weather-data">
+        <p>{{item.datetime | date:'M/d H:mm'}}</p>
+        <p>{{item.description}}</p>
+        <img [src]="item.icon" [alt]="item.weather" />
+        <p class="temp-max">{{item.temp_max}}</p>
+        <p class="temp-min">{{item.temp_min}}</p>
+    <div>
+</div>

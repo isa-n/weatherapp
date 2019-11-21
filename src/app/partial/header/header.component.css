@@ -1,0 +1,57 @@
+.flex-col-container{
+    display:flex;
+    flex-flow: column nowrap;
+}
+
+header{
+    padding:0;
+    position: fixed;
+    width: 100%;
+    height:100px;
+    background-image: linear-gradient(180deg, white 50%, lightcyan);
+    z-index: 100;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1px;
+    background: cyan;
+    width: 100%;
+}
+
+#pagetitle{
+    color:deepskyblue;
+    filter: drop-shadow(1px 1px 1px rgba(0,0,0,0.4));
+    margin: 0 auto;
+}
+
+#pagetitle.sunny::before,#pagetitle.sunny::after{
+	content: "\2600";
+	color:salmon;
+	margin:0.5em;
+}
+#pagetitle.cloudy::before,#pagetitle.cloudy::after{
+	content: "\2601";
+	color:slategray;
+	margin:0.5em;
+}
+#pagetitle.rainy::before,#pagetitle.rainy::after{
+	content: "\2602";
+	color:darkblue;
+	margin:0.5em;
+}
+
+header app-search{
+    margin: 0 auto ;
+}
+
+header p#errmsg{
+    color:red;
+    margin: 0 auto;
+    height:14px ;
+    font-size:14px;
+}
